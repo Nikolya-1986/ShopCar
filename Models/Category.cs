@@ -8,8 +8,8 @@ namespace ShopCar.Models
     public class Category
     {
         public int id { set; get; }
-        public string categoryName { set; get; }
-        public string desc { set; get; }
-        public List<Car> cars { set; get; }
+        public required string categoryName { set; get; }
+        public required string desc { set; get; }
+        public required List<Car> cars { set; get; }
     }
 }

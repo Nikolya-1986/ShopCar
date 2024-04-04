@@ -8,14 +8,14 @@ namespace ShopCar.Models
     public class Car
     {
         public int id { set; get; }
-        public string name { set; get; }
-        public string shortDesc { set; get; }
-        public string longDesc { set; get; }
-        public string img { set; get; }
+        public required string name { set; get; }
+        public required string shortDesc { set; get; }
+        public required string longDesc { set; get; }
+        public required string img { set; get; }
         public ushort price { set; get; }
         public bool isFavorite { set; get; }
         public bool avalible { set; get; }
         public int categoryId { set; get; }
-        public virtual Category Category { set; get; }
+        public virtual required Category Category { set; get; }
     }
 }

@@ -15,8 +15,8 @@ namespace ShopCar.Mocks
             {
                 return new List<Category>
                 {
-                    new Category { categoryName = "Электромобили", desc = "Современный вид транспорта", },
-                    new Category { categoryName = "Классические автомобили", desc = "Машины с двигателем внутреннего сгорания", }
+                    new Category { categoryName = "Электромобили", desc = "Современный вид транспорта", cars = null },
+                    new Category { categoryName = "Классические автомобили", desc = "Машины с двигателем внутреннего сгорания", cars = null }
                 };
             }
         }
