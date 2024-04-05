@@ -13,19 +13,19 @@ namespace ShopCar.Controllers
         private readonly IAllCars _allCars;
         private readonly ICarsCategory _allCarsCategory;
 
-        public CarsController(IAllCars allCars, ICarsCategory allCarsCategory)
+        public CarsController(IAllCars iAllCars, ICarsCategory iAllCarsCategory)
         {
-            _allCars = allCars;
-            _allCarsCategory = allCarsCategory;
+            _allCars = iAllCars;
+            _allCarsCategory = iAllCarsCategory;
         }
 
         public ViewResult List()
         {
-            ViewBag.Title = "Страницв с автомобилями";
-            CarsListViewModel cars = new CarsListViewModel();
-            cars.allCars = _allCars.Cars;
-            cars.currCategory = "Все автомобили";
-            return View(cars);
+            ViewBag.Title = "Страница с автомобилями";
+            CarsListViewModel obj = new CarsListViewModel();
+            obj.allCars = _allCars.Cars;
+            obj.currCategory = "Все автомобили";
+            return View(obj);
         }
     }
 }

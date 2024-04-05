@@ -31,8 +31,6 @@ namespace ShopCar.Mocks
             }
         }
         public required IEnumerable<Car> getFavCars { get; set; }
-        IEnumerable<Car> IAllCars.Cars { get => throw new NotImplementedException(); }
-
         public Car getObjCar(int carId)
         {
             throw new NotImplementedException();

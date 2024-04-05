@@ -1,7 +1,13 @@
+using ShopCar.Interfaces;
+using ShopCar.Mocks;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IAllCars, MockCars>();
+builder.Services.AddScoped<ICarsCategory, MockCategory>();
 
 var app = builder.Build();
 

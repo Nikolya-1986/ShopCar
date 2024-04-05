@@ -8,7 +8,7 @@ namespace ShopCar.ViewModels
 {
     public class CarsListViewModel // общая модель на основе которой создаются объекты и передаются в шаблоны
     {
-        public IEnumerable<Car> allCars { get; set; }
-        public string currCategory { get; set; }
+        public IEnumerable<Car>? allCars { get; set; }
+        public string? currCategory { get; set; }
     }
 }
