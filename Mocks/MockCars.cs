@@ -21,11 +21,11 @@ namespace ShopCar.Mocks
                         avalible = true, Category = _categoryCars.AllCategories.First() },
 
                     new Car { name = "Ford Focus", shortDesc = "Тихий и спокойный", longDesc = "Удобный автомобиль для городской жизни компании Ford",
-                        img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2gNuwWUhdpguoO-HI5XRwrXcy5yRHDz0LK3-rthspBA&s", price = 35000,
+                        img = "https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=600", price = 35000,
                         isFavorite = true, avalible = true, Category = _categoryCars.AllCategories.Last() },
                 
                     new Car { name = "Mersedes C class", shortDesc = "Уютный и большой", longDesc = "Удобный автомобиль для городской жизни компании Mersedes",
-                        img = "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/116201/c-class-exterior-right-rear-three-quarter.jpeg?isig=0&q=80", price = 40000,
+                        img = "https://c4.wallpaperflare.com/wallpaper/297/946/451/mercedes-benz-sedan-mercedes-sedan-wallpaper-preview.jpg", price = 40000,
                         isFavorite = true, avalible = true, Category = _categoryCars.AllCategories.Last() }
                 };
             }
