@@ -9,7 +9,7 @@ namespace ShopCar.Interfaces
     public interface IAllCars
     {
         IEnumerable<Car> Cars { get; }
-        IEnumerable<Car> getFavCars { set; get; }
+        IEnumerable<Car> getFavCars { get; }
         Car getObjCar (int carId);
     }
 }
