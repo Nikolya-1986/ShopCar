@@ -17,7 +17,7 @@ namespace ShopCar.Models
         public List<ShopCartItem> listShopItems { get; set; } 
         public static ShopCart GetCart(IServiceProvider services)
         { // сессия для работы с товарами в корзине
-            ISession? session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext?.Session;
+            ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
             var context = services.GetService<AppDBContent>(); // подключение сервиса
             string shopCartId = session?.GetString("CartId") ?? Guid.NewGuid().ToString(); // значение CartId из сессиия
             session?.SetString("CartId", shopCartId);

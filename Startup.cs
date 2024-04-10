@@ -11,7 +11,7 @@ namespace ShopCar
         private IConfigurationRoot _configString;
         public Startup(IHostingEnvironment hostingEnvironment)
         {
-            _configString = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath).AddJsonFile("dbsettings.json").Build();
+            _configString = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath).AddJsonFile("appsettings.json").Build();
         }
         public void ConfigurationServices(IServiceCollection services)
         {

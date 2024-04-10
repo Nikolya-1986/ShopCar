@@ -1,5 +1,6 @@
 using ShopCar.Interfaces;
 using ShopCar.Mocks;
+using ShopCar.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,6 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IAllCars, MockCars>();
 builder.Services.AddScoped<ICarsCategory, MockCategory>();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
