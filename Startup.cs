@@ -3,6 +3,7 @@ using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 using Microsoft.EntityFrameworkCore;
 using ShopCar.Repository;
 using ShopCar.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ShopCar
 {
@@ -32,7 +33,11 @@ namespace ShopCar
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
-            app.UseMvcWithDefaultRoute();
+            // app.UseMvcWithDefaultRoute();
+            app.UseMvc(routes => {
+                routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(name: "categoryFilter", template: "{controller=Car}/{action}/{category?}", defaults: new { Controller="Car", action="List" });
+            });
 
             using (var scope = app.ApplicationServices.CreateScope()) // создание окружения и внутри переменную
             {
