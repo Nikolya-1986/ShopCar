@@ -9,16 +9,17 @@ namespace ShopCar
 {
     public class Startup
     {
-        private IConfigurationRoot _configString;
-        public Startup(IHostingEnvironment hostingEnvironment)
-        {
-            _configString = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath).AddJsonFile("appsettings.json").Build();
-        }
+        // private IConfigurationRoot _configString;
+        // public Startup(IHostingEnvironment hostingEnvironment)
+        // {
+        //     _configString = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath).AddJsonFile("appsettings.json").Build();
+        // }
         public void ConfigurationServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_configString.GetConnectionString("DefaultConnection")));
+            // services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_configString.GetConnectionString("DefaultConnection")));
             services.AddTransient<IAllCars, CarRepository>(); // связь между классом и интерфейсом который реализует данный класс
             services.AddTransient<ICarsCategory, CategoryRepository>();
+            services.AddTransient<IAllOrders, OrdersRepository>();
             services.AddControllersWithViews();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShopCart.GetCart(sp));
